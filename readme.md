@@ -5,3 +5,28 @@
 - apache
 - php
 - php-fpm
+
+## start
+
+```
+docker-compose up -d
+```
+
+## Stop & delete
+
+```
+docker-compose down
+```
+
+## Go into amazon linux container
+
+```
+docker exec -it amzn-linux-2 /bin/sh
+```
+
+## Debug settings
+
+
+![phpstorm_setting1](./images/phpstorm_setting1.png)
+
+![phpst

@@ -7,6 +7,8 @@ RUN amazon-linux-extras install -y
 RUN yum update -y \
     && yum install \
         systemd \
+        gcc \
+        make \
         tar \
         unzip \
         sudo \
@@ -24,7 +26,8 @@ RUN useradd "ec2-user" && echo "ec2-user ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 RUN amazon-linux-extras enable php7.4
 
-RUN yum install php-cli php-pdo php-fpm php-mysqlnd -y
+RUN yum install php-cli php-pdo php-fpm php-mysqlnd php-pear php-devel -y
+RUN pecl install xdebug
 
 RUN systemctl enable httpd \
     && systemctl enable httpd php-fpm.service
