@@ -24,7 +24,7 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 # create user
 RUN useradd "ec2-user" && echo "ec2-user ALL=NOPASSWD: ALL" >> /etc/sudoers
 
-RUN amazon-linux-extras enable php7.4
+RUN amazon-linux-extras enable php8.1
 
 RUN yum install php-cli php-pdo php-fpm php-mysqlnd php-pear php-devel -y
 RUN pecl install xdebug
