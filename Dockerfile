@@ -26,7 +26,7 @@ RUN useradd "ec2-user" && echo "ec2-user ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 RUN amazon-linux-extras enable php8.1
 
-RUN yum install php-cli php-pdo php-fpm php-mysqlnd php-pear php-devel -y
+RUN yum install php-cli php-pdo php-fpm php-mysqlnd php-pear php-devel php-mbstring -y
 RUN pecl install xdebug
 
 RUN systemctl enable httpd \
