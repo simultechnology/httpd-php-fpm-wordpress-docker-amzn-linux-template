@@ -30,6 +30,7 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
     volumes:
       - ./conf_files/www.conf:/etc/php-fpm.d/www.conf
+      - ./conf_files/httpd.conf:/etc/httpd/conf/httpd.conf
       - ./conf_files/php.ini:/etc/php.ini
       - ./html:/var/www/html
       - type: bind
