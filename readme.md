@@ -29,4 +29,4 @@ docker exec -it amzn-linux-2 /bin/sh
 
 ![phpstorm_setting1](./images/phpstorm_setting1.png)
 
-![phpstorm_setting2](./images/phpstorm_setting1.png)
+![phpstorm_setting2](./images/phpstorm_setting2.png)
